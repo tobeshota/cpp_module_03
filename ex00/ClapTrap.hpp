@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:10:07 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/14 12:03:53 by tobeshota        ###   ########.fr       */
+/*   Updated: 2024/06/14 15:27:39 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,6 @@ class ClapTrap {
   ClapTrap(const ClapTrap& other);             //  コピーコンストラクタ
   ClapTrap& operator=(const ClapTrap& other);  //  コピー代入演算子
   ~ClapTrap();                                 //  デストラクタ
-
-  std::string get_name(void) const;
-  int get_hit_points(void) const;
-  int get_enegy_points(void) const;
-  int get_attack_damage(void) const;
 
   void attack(const std::string& target);
   void takeDamage(unsigned int amount);
