@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:12:20 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/14 12:05:31 by tobeshota        ###   ########.fr       */
+/*   Updated: 2024/06/14 15:10:07 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@
 #define DEFAULT_ENEGY_POINTS 10
 #define DEFAULT_ATTACK_DAMAGE 0
 
-ClapTrap::ClapTrap() { std::cout << "(constructor)Default constructor called" << std::endl; }
+ClapTrap::ClapTrap() : m_hit_points(DEFAULT_HIT_POINTS), m_enegy_points(DEFAULT_ENEGY_POINTS), m_attack_damage(DEFAULT_ATTACK_DAMAGE)
+{
+	std::cout << "(constructor)ClapTrap Default constructor called" << std::endl;
+}
 
 ClapTrap::ClapTrap(const std::string &name) : m_name(name), m_hit_points(DEFAULT_HIT_POINTS), m_enegy_points(DEFAULT_ENEGY_POINTS), m_attack_damage(DEFAULT_ATTACK_DAMAGE)
 {
@@ -25,13 +28,13 @@ ClapTrap::ClapTrap(const std::string &name) : m_name(name), m_hit_points(DEFAULT
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 {
-	std::cout << "(constructor)Copy constructor called" << std::endl;
+	std::cout << "(constructor)ClapTrap Copy constructor called" << std::endl;
 	*this = other;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "ClapTrap Copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
 		m_name = other.get_name();
