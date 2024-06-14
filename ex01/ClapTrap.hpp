@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:10:07 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/14 15:34:38 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/14 19:15:14 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class ClapTrap {
   ClapTrap(const std::string& name);
   ClapTrap(const ClapTrap& other);  //  コピーコンストラクタ
   ClapTrap& operator=(const ClapTrap& other);  //  コピー代入演算子
-  ~ClapTrap();                                 //  デストラクタ
+  virtual ~ClapTrap();                                 //  デストラクタ
 
   void attack(const std::string& target);
   void takeDamage(unsigned int amount);

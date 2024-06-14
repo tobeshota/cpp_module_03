@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:19:58 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/14 17:18:11 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/14 19:23:01 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,19 @@ static void put_line(void)
   static int index;
   std::cout << "- " << index++ << RULED_LINE << std::endl;
 }
+/*
+void free_instance(ClapTrap *p)
+{
+  delete p;
+}
+
+int main(void)
+{
+  ScavTrap *st = new ScavTrap("st");
+  free_instance(st);
+  put_line();
+}
+*/
 
 int main() {
   put_line();
