@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:12:20 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/14 15:27:44 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/14 15:42:59 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,18 +45,18 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 	return *this;
 }
 
-ClapTrap::~ClapTrap() { std::cout << "(destructor)ClapTrap" << m_name << " has been destroyed!" << std::endl; }
+ClapTrap::~ClapTrap() { std::cout << "(destructor)ClapTrap " << m_name << " has been destroyed!" << std::endl; }
 
 bool ClapTrap::can_move(void) const
 {
 	if (m_hit_points <= 0)
 	{
-		std::cout << "ClapTrap" << m_name << "has no hit points left!" << std::endl;
+		std::cout << "ClapTrap " << m_name << "has no hit points left!" << std::endl;
 		return false;
 	}
 	else if (m_enegy_points <= 0)
 	{
-		std::cout << "ClapTrap" << m_name << "has no enegy points left!" << std::endl;
+		std::cout << "ClapTrap " << m_name << "has no enegy points left!" << std::endl;
 		return false;
 	}
 	return true;
@@ -67,7 +67,7 @@ void ClapTrap::attack(const std::string &target)
 	if (can_move() == false)
 		return ;
 	m_enegy_points--;
-	std::cout << "ClapTrap" << m_name << " attacks " << target << ", causing" << m_attack_damage << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << m_name << " attacks " << target << ", causing" << m_attack_damage << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
