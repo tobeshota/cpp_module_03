@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:12:20 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/14 15:47:55 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/14 15:53:41 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void ClapTrap::attack(const std::string &target)
 	if (can_move() == false)
 		return ;
 	m_enegy_points--;
-	std::cout << "ClapTrap " << m_name << " attacks " << target << ", causing" << m_attack_damage << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << m_name << " attacks " << target << ", causing " << m_attack_damage << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
