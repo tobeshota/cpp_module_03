@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:12:20 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/14 15:10:07 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/14 15:27:44 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,35 +37,15 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 	std::cout << "ClapTrap Copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
-		m_name = other.get_name();
-		m_hit_points = other.get_hit_points();
-		m_enegy_points = other.get_enegy_points();
-		m_attack_damage = other.get_attack_damage();
+		m_name = other.m_name;
+		m_hit_points = other.m_hit_points;
+		m_enegy_points = other.m_enegy_points;
+		m_attack_damage = other.m_attack_damage;
 	}
 	return *this;
 }
 
 ClapTrap::~ClapTrap() { std::cout << "(destructor)ClapTrap" << m_name << " has been destroyed!" << std::endl; }
-
-std::string ClapTrap::get_name(void) const
-{
-	return m_name;
-}
-
-int ClapTrap::get_hit_points(void) const
-{
-	return m_hit_points;
-}
-
-int ClapTrap::get_enegy_points(void) const
-{
-	return m_enegy_points;
-}
-
-int ClapTrap::get_attack_damage(void) const
-{
-	return m_attack_damage;
-}
 
 bool ClapTrap::can_move(void) const
 {
