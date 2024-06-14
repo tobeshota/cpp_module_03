@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tobeshota <tobeshota@student.42.fr>        +#+  +:+       +#+        */
+/*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:19:58 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/14 12:03:34 by tobeshota        ###   ########.fr       */
+/*   Updated: 2024/06/14 15:32:43 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 int main(void) {
-  ClapTrap robot("HVC-012");
+  ClapTrap robot("CT_1");
 
   robot.attack("target1");
   robot.takeDamage(5);
