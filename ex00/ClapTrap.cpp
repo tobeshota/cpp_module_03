@@ -6,7 +6,7 @@
 /*   By: toshota <toshota@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:12:20 by tobeshota         #+#    #+#             */
-/*   Updated: 2024/06/14 15:42:59 by toshota          ###   ########.fr       */
+/*   Updated: 2024/06/14 15:47:55 by toshota          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap() : m_hit_points(DEFAULT_HIT_POINTS), m_enegy_points(DEFAULT_
 
 ClapTrap::ClapTrap(const std::string &name) : m_name(name), m_hit_points(DEFAULT_HIT_POINTS), m_enegy_points(DEFAULT_ENEGY_POINTS), m_attack_damage(DEFAULT_ATTACK_DAMAGE)
 {
-	std::cout << "(constructor)ClapTrap" << m_name << " has been created!" << std::endl;
+	std::cout << "(constructor)ClapTrap " << m_name << " has been created!" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other)
