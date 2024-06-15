@@ -76,14 +76,14 @@ function assert {
 function run_test {
 	printf "|- - - - - - - - - - start - - - - - - - - - -|\n"
 	# 追加形式: assert <actual> <expect>
-	assert "" "(constructor)ClapTrapHVC-012 has been created!
-ClapTrapHVC-012 attacks target1, causing0 points of damage!
-ClapTrap HVC-012 takes 5 points of damage!
-ClapTrap HVC-012 is repaired for 3 points!
-ClapTrapHVC-012 attacks target2, causing0 points of damage!
-ClapTrap HVC-012 takes 15 points of damage!
-ClapTrapHVC-012has no hit points left!
-(destructor)ClapTrapHVC-012 has been destroyed!"
+	assert "" "(constructor)ClapTrap CT_1 has been created!
+ClapTrap CT_1 attacks target1, causing 0 points of damage!
+ClapTrap CT_1 takes 5 points of damage!
+ClapTrap CT_1 is repaired for 3 points!
+ClapTrap CT_1 attacks target2, causing 0 points of damage!
+ClapTrap CT_1 takes 15 points of damage!
+ClapTrap CT_1has no hit points left!
+(destructor)ClapTrap CT_1 has been destroyed!"
 }
 
 # - main ---------------------------
