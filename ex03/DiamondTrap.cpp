@@ -12,17 +12,21 @@
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap() : ClapTrap(), FragTrap(), ScavTrap() {
-  this->m_hit_points = FragTrap::m_hit_points;
-  this->m_enegy_points = ScavTrap::m_enegy_points;
-  this->m_attack_damage = FragTrap::m_attack_damage;
+#define DEFAULT_HIT_POINTS 100
+#define DEFAULT_ENEGY_POINTS 50
+#define DEFAULT_ATTACK_DAMAGE 30
+
+DiamondTrap::DiamondTrap() : ClapTrap() {
+  this->m_hit_points = DEFAULT_HIT_POINTS;
+  this->m_enegy_points = DEFAULT_ENEGY_POINTS;
+  this->m_attack_damage = DEFAULT_ATTACK_DAMAGE;
   std::cout << "(constructor)DiamondTrap Default constructor called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"), FragTrap(), ScavTrap(), m_name(name) {
-  this->m_hit_points = FragTrap::m_hit_points;
-  this->m_enegy_points = ScavTrap::m_enegy_points;
-  this->m_attack_damage = FragTrap::m_attack_damage;
+DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"), m_name(name) {
+  this->m_hit_points = DEFAULT_HIT_POINTS;
+  this->m_enegy_points = DEFAULT_ENEGY_POINTS;
+  this->m_attack_damage = DEFAULT_ATTACK_DAMAGE;
   std::cout << "(constructor)DiamondTrap " << m_name << " has been created!"
             << std::endl;
 }
