@@ -17,6 +17,13 @@
 #define DEFAULT_ATTACK_DAMAGE 30
 
 DiamondTrap::DiamondTrap() : ClapTrap() {
+  /** DiamondTrapクラスの各属性に任意の値を代入するためには．直接値を代入する必要がある（DiamondTrap::m_attack_damage = FragTrap::m_attack_damageによる代入手法は，代入演算子の両辺ともに同じ値を指しているため，できない）．
+   * `class DiamondTrap : public FragTrap, public ScavTrap`(DiamondTrap.hpp, l.19)より，DiamondTrapはFragTrapを継承したのちにScavTrapを継承する．
+   * そして，属性m_hit_points，m_enegy_points，m_attack_damageはClapTrapクラスにのみ存在する．
+   * このため，各属性には最後に継承されたScavTrapで代入された値が格納されている．
+   * また，このことはどのクラスの属性を呼び出すかに関係ない（ClapTrap::m_hit_points == FragTrap::m_hit_points == ScavTrap::m_hit_points == DiamondTrap::m_hit_points == ScavTrapのコンストラクタでm_hit_pointsに代入された値)．
+   * したがって，当該クラス（ここではDiamondTrapクラス）の各属性に任意の値を代入するためには，そのクラスのコンストラクタで任意の値を直接代入する(例：`this->m_hit_points = DEFAULT_HIT_POINTS;`)必要がある．
+   */
   this->m_hit_points = DEFAULT_HIT_POINTS;
   this->m_enegy_points = DEFAULT_ENEGY_POINTS;
   this->m_attack_damage = DEFAULT_ATTACK_DAMAGE;
